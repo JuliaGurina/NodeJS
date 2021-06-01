@@ -51,10 +51,8 @@ app.delete("/deleteTask", (req, res) => {
 });
 
 app.delete("/deleteTasks", (req, res) => {
-  Task.deleteMany(req.body).then((result) => {
-    Task.find().then((result) => {
-      res.send({ data: result });
-    });
+  Task.deleteMany.then((result) => {
+    res.send({ data: result });
   });
 });
 
